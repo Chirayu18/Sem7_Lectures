@@ -1,0 +1,100 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\addbibresource{references.bib}
+\title{  \\ \large{ Course Code } }
+
+\author{Chirayu Gupta}
+\date{}
+\begin{document}
+\section{Lecture 1}
+\begin{itemize}
+	\item If you can compute anything then a turing machine must be able to solve it.
+	\item Polynomial time: Order is \( \order{n^\alpha} \)
+	\item Quantum computers claim to solve non-deterministic polynomial(NP) problems in polynomial time
+\end{itemize}
+\begin{theorem}
+	\textbf{Moore's Law}: The number of transistors that you can put in an IC doubles every 2 years.
+\end{theorem}
+\begin{itemize}
+	\item Cant pack transistors more and more because at small transistors diameters quantum tunneling can take place
+	\item "Lower Limit"
+	\item Hence Quantum computers can help
+\end{itemize}
+\subsection{Basics of Quantum Physics}
+\( \psi \) denotes state of a system: I can compute anything with \textbf{only} this.
+In position basis, I can have
+\[ \bra{x}\ket{\psi} = \psi(x) \]
+Or,
+\[ \bra{p}\ket{\psi} = \psi(p) \]
+Reside in "Hilbert Space"(A linear vector space with an inner product, Infinite dimension)
+Can be finite dimension hilbert space
+\[ L^2 \rightarrow l(l+1)h \]\[ L_z \rightarrow mh (-l\leq m \leq l) \]
+Operator is an abstract object until you choose a representation.
+Applying a operator is same as applying a matrix multiplication.
+In a eigenbasis for an operator:
+\[ \hat{O} \ket{\psi} = a \ket{\psi} \]
+\( \ket{\psi} \) only increases or decreases in length\\
+Quantum computing is all about operators on states
+\[ O \ket{\psi} = \ket{\psi'} \]
+\begin{equation}
+	\ket{\psi} = \displaystyle\sum_{i=1}^{M}a_i \ket{\phi_i}
+	\label{eq:cmp}
+\end{equation}
+We will be dealing with TDSE:
+\begin{equation}
+	ih \pdv{\psi(x,t)}{t} = \hat{H}\psi(x,t)
+	\label{eq:tdse}
+\end{equation}
+\textbf{Time Evolution}
+\begin{equation}
+	\psi(x,t) = e^{-\iota\hat{H}t/h} \psi(x,0)
+	\label{eq:timeevol}
+\end{equation}
+This is the Scrodinger picture, it is for non-time dependent hamiltonian
+\[ \psi(x,t) = \hat(U) \psi(x,0) \]
+Where U is unitary operator\\
+If:
+\[ H \rightarrow H(t) \]
+\[ U(t_0,t) = \mathbf{T} e^{-\iota/h \displaystyle\int_{t_0}^{t}dt' H(t')} \]
+It can be shown that:
+\[ U^\dagger U = I \]
+Also:\\
+Eigenvalues of U are of modulo 1 (TODO:Prove this)
+\begin{theorem}
+	For any hermitian Matrix A
+	\begin{displaymath}
+		e^{\iota A} = \hat{U}
+	\end{displaymath}
+	Where U is unitary operator	
+\end{theorem}
+For 2 non commuting operators A and B
+\[ e^{A + B)} \neq e^A \cdot e^B \]
+For \( [ [A,B], A] =0 \) (TODO:See proof)
+\[ e^{A + B} = e^A e^B e^{-[A,B]/2} \]
+\[ A \ket{\psi} = a \ket{\psi} \]\[ A \ket{\psi} \bra{\psi} \ket{\psi} = a \ket{\psi} \]
+Replace \(  \ket{\psi} \bra{\psi}\) by \[ \hat{\rho} \]
+which is the density operator
+\[\bra{\psi} \rho \ket{\psi} = \abs{\psi}^2 \]
+\( \rho \) is as important as \( \psi \). Real importance is apparent in ensemble of systems.\\
+\textbf{Ensemble} is a collection of identical systems. Example a collection of \( H_2 \) atoms in different states. No use if all are in the same state.\\
+Suppose I have N states with \( N_1 \) of them in state \( \psi_1 \), \( N_2 \) in \( \psi_2 \) etc.
+So instead of just \( \psi \), I have and ensemble of states: "Mixed states" 
+\begin{equation}
+\begin{bmatrix}
+	 N_1 \psi_1\\
+	 N_2 \psi_2\\
+	 N_3 \psi_3\\
+	...
+\end{bmatrix}
+\end{equation}
+\end{document}

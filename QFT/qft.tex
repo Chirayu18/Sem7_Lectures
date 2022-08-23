@@ -1,0 +1,187 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\addbibresource{references.bib}
+\title{ Quantum Field Theory \\ \large{ PH } }
+\author{Chirayu Gupta}
+\date{}
+\begin{document}
+\maketitle
+\section{Lecture 1}
+All states contribute to relativistic corrections:
+\[ H \rightarrow H + \partial V \]
+Where the corrections in energy is: 
+\[ E_{corr} = \bra{0} \partial V \ket{0} + \sum_n\displaystyle\frac{\abs{\bra{0}\partial V \ket{n}}^2}{E_0 - E_n}  + ... \]
+As you can see it depends on n.\\
+Since for relativistic cases processes like 
+\[ p + p \rightarrow p + p + \pi_0 \] are possible. That is new particles can be created,
+the number of such states \( \ket{n} \) are infinite.\\
+Typically, the relativistic corrections are af the order \( \order{v^2} \) because, typically the denominator
+is \( mc^2 \) and since \[ \displaystyle\frac{E}{mc^2} = \displaystyle\frac{\gamma c^2}{c^2} = \displaystyle\frac{1}{\sqrt{1-v^2/c^2}} = 1+ \displaystyle\frac{v^2}{c^2} \]
+\section{Lecture 2}
+\subsection{Natural Units}
+\begin{itemize}
+	\item \( h_{cross} = 1 \)
+	\item \( c = 1 \)
+\end{itemize}
+Above 2 conditions are for natural units.
+There are implications on dimentions because of this which are:
+\begin{itemize}
+	\item \( [m] = [E] = [L^{-1}] = [T^{-1}]  \)
+\end{itemize}
+\subsection{Theory of Single free spinless particle of mass \( \mu \)[From coleman notes]}
+Momentum operator:
+\[ \va{P} \ket{k} = k \ket{k} \]
+\[ \bra{k} \ket{k'} = \partial (k-k') \]
+Completeness:
+\( \int_{}^{} \bra{k} \ket{k} d^3 k = 1 \)\\
+We know:
+\[ \psi(k) = \bra{k}\ket{\psi} \]
+Also classically we know:
+\[ H \ket{k} = \abs{k}^2 / 2 \mu \ket{k} \]
+To introduce relativity we introduce:
+\[ H \ket{k} = \sqrt{\abs{k}^2  + \mu^2} \cdot \ket{k} = \omega \ket{k} \]
+How do we know this makes the theory relativistic(or Lorentz invariant)?\\
+First we define Translational and Rotational Invariance:
+\subsection{Translational Invariance}
+For a linear operator\( U \) specifying a translation: we have
+\begin{equation}
+	U(a)U(a)^\dagger = 1
+	\label{eq:ti_1}
+\end{equation}
+\begin{equation}
+	U(0) = 1
+	\label{eq:ti_2}
+\end{equation}
+\begin{equation}
+	U(a)U(b) = U(a+b)
+	\label{eq:ti_3}
+\end{equation}
+The U satisfying these is \( U(a) = e^{\iota \mathbf{p} a} \) where \( \mathbf{p} = (H,\va{p}) \) \\
+\[ U(a)\ket{0} = \ket{a} \]
+\[ \bra{a}O(x+a)\ket{a} = \bra{0}O(x)\ket{0} \]
+\subsection{Rotational Invariance}
+Similar to [Equation \ref{eq:ti_1} - \ref{eq:ti_3}], we have equations for rotation
+\begin{equation}
+	U(R)U(R)^\dagger = 1
+	\label{eq:ri_1}
+\end{equation}
+\begin{equation}
+	U(1) = 1
+	\label{eq:ri_2}
+\end{equation}
+\begin{equation}
+	U(R_1)U(R_2) = U(R_1 R_2)
+	\label{eq:ri_3}
+\end{equation}
+A U satisfying all these is given by 
+\[ U(R)\ket{\va{k}} = \ket{R \va{k}} \]
+TODO: Put Lorentz invariance and the relativistic contour integral calculations from coleman
+\section{Lecture 3}
+\subsection{Klien-Gordan equation}
+A heuristic way to derive SC equation:
+\[ E = \displaystyle\frac{P^2}{2m} \]
+\[ E \rightarrow \iota \pdv{}{t} \]
+\[ p_j \rightarrow - \iota \pdv{}{x_j} \]
+Action is defined as:
+\[ \mathbf{S}[\phi] = \displaystyle\int_{}^{}(\partial^\mu \phi \partial_\mu \phi - m^2 \phi^2(x)) \]
+Similarly we derive KG eqn:
+\[ E^2 = p^2 + m^2 \]
+\[ (\pdv_2{}{t} - \nabla^2)\phi + m^2 \phi(x,t) = 0 \]
+A solution to this equation is \( e^{\iota(k\cdotx + \omega t)} \). When you apply \( \hat{H} \) we get energies like \( -\omega \phi \).\textbf{Negative Energy solution}. If you perturb this system slightly it keeps going down the potential well(since energy not bounded from below).  
+In QM continuity eqn:
+\[ \nabla J + \pdv{\rho}{t} = 0 \]
+\[J_i = \frac{ 1 }{ 2im } ( \phi^* \partial \phi - (\partial \phi^*) \phi)\]
+\[ \rho = \displaystyle\frac{\iota}{2m}(\phi^* \pdv{\phi}{t} - \pdv{\phi^*}{t}) \]
+With KG its same but \( \rho \) is not positive definite.\\
+Hence, KG equation failed!.\\
+TODO: Dont really understand why KG failed
+\subsection{Rotation}
+Rotation is like a gauge transformation: we apply some transformation on \( \hat{A}, \hat{\phi} \) which does not change E and B. The choice of coordinations/description has nothing to do with the system!!\\
+Quantites that don't change under a transformation are \textbf{scalar} under that transformation.
+Eg: \( x^2 + y^2 \) does not depend on choice of axes given a origin.\\
+A scalar is always associated with a transformation.
+\subsection{Scalar Field, Vector Field}
+Given a point and density of air(\( \rho \)) we take two coordinate systems or 2 different description:
+\[ \rho(\va{x}) \rightarrow \rho(R \va{x}) \]
+Rho is a scalar field.\\
+For a vector field under rotation:
+\[ E_x(\va{X},\va{Y}) , E_y(\va{X},\va{Y}) \rightarrow R E(R \va{X}) \]
+Both field components and arguments changed.\\
+\textbf{Question}: I do a rotation on the coordinates then what is the effent on components of \( \psi_n(\va{X}) \)\\
+\[ \mathbf{R} \psi_{ij}(R \va{x}) \]
+\( \mathbf{R} \) is representation of the Rotation group \( SO(3) \)
+\subsection{Lorentz Group}
+Group is \[ SO(1,3)\] not \( SO(4) \)
+in which \[ (-x_0^2 + \displaystyle\sum_{}^{} x_i^2) \]
+is invariant.\\
+Transformation is represented by:
+\[ \mathbf{R}_{ij} \psi_j ( \Lambda \va{x}) \]
+\begin{equation}
+	\eta = Diag(-1,1,1,1)
+	\label{eq:mmatrix}
+\end{equation}
+Lambda satisfies:
+\[ \Lambda^t \eta \Lambda = \eta \]
+\[ \Lambda_0^0 \geq 1 \rightarrow Orthochoronum \]
+\[ \Lambda_0^0 \leq 1 \rightarrow Not\ Considered\ as\ impllies\ time\ reversal \]
+Formally Lorentz group defined as \( SO^+ ( 1,3) \) to denote orthochronum.\\
+For \( SO(1,3) \) \( Det \Lambda = 1 \)
+For parity: \( \Lambda = diag(-1,1,1,1) \)\\
+For time reversal: \( \Lambda = diag(1,-1,-1,-1) \)\\
+Parity and time reversal are outside the \( SO(1,3) \) group.\\
+For 2-D parity is inside \( SO(1,3) \) (TODO:Why?)
+
+\section{Lecture 4}
+\subsection{Classical Field Theory}
+\[ \partial \mathbf{S} = \partial \displaystyle\int_{}^{} dt L(x,\dot{x}) = 0\]
+Subject to constraint:
+\[ \partial x |_{t_1,t_2} = 0 \]
+For QFT:
+\[ \mathbf{S} = \displaystyle\int_{}^{} d^4 x \mathbf{L}(\phi(x),\partial_\mu \phi(x)) \]
+\[ \partial \mathbf{S} = 0 \]
+Boundary condition:
+\[ \partial \phi(x) = 0 \]
+\[ \delta S = \displaystyle\int_{}^{}d^4 x [ \displaystyle\pdv{L}{\phi(x)}] \delta \phi(x) + \displaystyle\pdv{L}{\partial_\mu \phi(x)} \partial(\delta \phi(x)) \]
+\[ \delta S = \displaystyle\int_{}^{}d^4 x [ \displaystyle\pdv{L}{\phi(x)}] \delta \phi(x) + - \partial_\mu \displaystyle\pdv{L}{\partial_\mu \phi(x)} \delta \phi(x) + \partial_\mu \displaystyle\pdv{L}{\partial_\mu \phi(x)} \delta \phi\]
+On solving we get:
+\[ \pdv{L}{\phi(x)} - \partial_\mu \displaystyle\frac{\partial L}{\partial(\partial_\mu \phi(x))} = 0 \]
+\begin{itemize}
+	\item In a Boundary condition: we set \( \phi \) at $t_1$ and $t_2$. For a double derivative equation: we can have only 2 boundary condition hence cant set velocity at \( t_1 \) and \( t_2  \) as well
+	\item Lagrangian is taken to be real
+	\item If Lagrangian not real Hamiltonian also not real\( \rightarrow \) problem in time evolution
+	\item Lagrangian is Lorentz invariant
+\end{itemize}
+\[ L = (\partial_\mu \phi)(\partial^\mu \phi) - m^2 \phi^2 \]
+\[ \pdv{L}{\phi} = -2m^2 \phi \]
+\[ \partial_\mu \pdv{L}{\partial_\mu \phi} = 4 \partial_\mu (\partial^\mu \phi) \]
+This gives KG equation(TODO:How?)
+\[ (\partial_\mu \partial^\mu + m^2 ) \phi = 0 \]
+If we write a new Lagrangian: 
+\[ L' = - \phi \partial_\mu \partial^\mu - m^2 \phi^2 \]
+\[  = L - \partial_\mu ( \phi \partial^\mu \phi) \]
+On putting in action principle we get an extra \( \partial \phi \) (which can be cancelled as we can change that in BT)  and \(   \partial_\mu ( \phi \partial^\mu \phi) \) which need to be cancelled \textbf{hence in defining Lagrangian like this we might need to add an extra boundary terms} which can be important in many theories.
+\[ S = \displaystyle\int_{}^{}d^4 L + BT \]
+\subsection{Global Symeetries(Reference Wienberg: Section 7.3)}
+\[ \psi(x) \rightarrow \psi(x) + \iota \epsilon F(x)\]
+\[ \delta S = \iota \epsilon \displaystyle\int_{\displaystyle\frac{\delta S[\psi]}{\delta \psi(x)}}^{F(x)} = 0 \]
+Then this transformation is the symmetry of the transformation.\\
+Now, if epsilon is function of x:
+\[ \delta S = \displaystyle\int_{}^{} -J^\mu(x) \pdv{\epsilon(x)}{X^\mu}  \]
+Integrating by parts,
+\[ - \displaystyle\int_{}^{} \pdv{J^\mu \epsilon(x)}{X^\mu} + \pdv{J^\mu}{X^\mu} \epsilon(x) \]
+Implies,
+\[ \dv{J^\mu}{X^\mu} = 0 \]
+\[ \partial_\mu J^\mu(x) = 0 \]
+This is known as \textbf{Noether's Theorem}
+
+\end{document}

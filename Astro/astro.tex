@@ -1,0 +1,52 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\addbibresource{references.bib}
+\title{ Astronomy and astrophysics \\ \large{ PH } }
+
+\author{Chirayu Gupta}
+\date{}
+\begin{document}
+\section{Sixteenth August}
+Some questions to ponder:
+\subsection{Stars}
+\begin{itemize}
+	\item Source of their luminosity
+	\item How big are they- radius/mass
+	\item What are they made of?
+	\item How long do they live
+	\item How do they change over time
+	\item What happens when they stop shining
+\end{itemize}
+\textbf{Luminosity}: About of light \textbf{received}
+\subsection{Black Body radiation}
+Plank's spectrum:
+\[ B_\nu(\nu,T) = \displaystyle\frac{2h\nu^3}{c^2} \displaystyle\frac{1}{e^{h\nu / k_b T} -1 } \]
+Leptons have conservation laws(Lepton conservation in HEP). No such law for photons.\\
+Wien's displacement law has different peaks depending on the formula used for \( B\) i.e. whether you use \( B_\nu \) or \( B_\lambda \)\\
+Colors observed are determined in terms of RGB. \textbf{Color} is the ratio of flux densities of two different wavelengths.
+\[ S_\nu = B_\nu \cdot \Omega \] 
+where \( \Omega \) is the solid angle\\
+TODO:See HR diagrams\\
+\subsection{Some relationships}
+Luminosity \( \propto M^3 \) for \( M> 10 M_{sun} \)\\
+\(\propto M^4 \) for \( M>0.5 M_{sun} \)
+\subsection{Spectral Lines}
+Provides information on:
+\begin{itemize}
+	\item Chemical composition
+	\item Column density(Amount of substance in LOS)
+	\item Gas temperature and pressure - Ratio of peaks gives temperature
+	\item Velocity structure
+	\item Ionization states
+\end{itemize}
+\end{document}
