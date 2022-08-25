@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.8.15)  19 AUG 2022 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.8.15)  25 AUG 2022 23:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,38 +552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--70
  []
 
 [2]
-./qft.tex:99: Missing { inserted.
-<to be read again> 
-                   }
-l.99 \[ (\pdv_2
-               {}{t} - \nabla^2)\phi + m^2 \phi(x,t) = 0 \]
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./qft.tex:99: Missing } inserted.
-<inserted text> 
-                }
-l.99 ...{t} - \nabla^2)\phi + m^2 \phi(x,t) = 0 \]
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./qft.tex:100: Undefined control sequence.
-l.100 ...n to this equation is \( e^{\iota(k\cdotx
-                                                   + \omega t)} \). When you...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (1.7859pt too wide) in paragraph at lines 99--102
+Overfull \hbox (8.93182pt too wide) in paragraph at lines 99--102
 \OT1/cmr/m/n/10.95 A so-lu-tion to this equa-tion is $\OML/cmm/m/it/10.95 e[]$\OT1/cmr/m/n/10.95 . When you ap-ply $[]$ we get en-er-gies like $\OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 !^^^$\OT1/cmr/m/n/10.95 .\OT1/cmr/bx/n/10.95 Negative
  []
 
@@ -592,7 +561,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
-[3] [4] [5] [6] (./qft.aux)
+[3] [4] [5] [6] [7] (./qft.aux)
 Package logreq Info: Writing requests to 'qft.run.xml'.
 \openout1 = `qft.run.xml'.
 
@@ -606,10 +575,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,8n,106p,10625b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on qft.pdf (6 pages, 179470 bytes).
+Output written on qft.pdf (7 pages, 183788 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

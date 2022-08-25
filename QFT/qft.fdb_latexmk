@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber qft"] 1660563778 "qft.bcf" "qft.bbl" "qft" 1660894525
-  "qft.bcf" 1660894130 106545 e97a375e3a80ae2450250fa044e8795d "pdflatex"
+["biber qft"] 1661451878 "qft.bcf" "qft.bbl" "qft" 1661452012
+  "qft.bcf" 1661452012 106545 e97a375e3a80ae2450250fa044e8795d "pdflatex"
   (generated)
   "qft.bbl"
   "qft.blg"
-["pdflatex"] 1660894525 "qft.tex" "qft.pdf" "qft" 1660894525
+["pdflatex"] 1661452011 "qft.tex" "qft.pdf" "qft" 1661452012
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -95,10 +95,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1660563776 334487 264baa1301fc3ae75d0cd4255b71b832 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1660563772 2927666 2b45b0efb410ea63cfeba809faf0da5f ""
-  "qft.aux" 1660894130 1962 69fcef62d77f849afdb0d7e9fef2439c "pdflatex"
-  "qft.bbl" 1660563778 466 ee04f40f768daeed26442158e95aba61 "biber qft"
-  "qft.run.xml" 1660894130 2298 6a52d0769980d44cc1df17f5886dec28 "pdflatex"
-  "qft.tex" 1660894525 8727 182ddde95fdfa4a614a7b054f5818128 ""
+  "qft.aux" 1661452012 2253 6a368f97dd4528155e7520645b255e39 "pdflatex"
+  "qft.bbl" 1661451878 466 ee04f40f768daeed26442158e95aba61 "biber qft"
+  "qft.run.xml" 1661452012 2298 6a52d0769980d44cc1df17f5886dec28 "pdflatex"
+  "qft.tex" 1661452010 11312 c4b1d17b11ce209a35b523ad12ab2941 ""
   (generated)
   "qft.aux"
   "qft.bcf"

@@ -96,8 +96,8 @@ Action is defined as:
 \[ \mathbf{S}[\phi] = \displaystyle\int_{}^{}(\partial^\mu \phi \partial_\mu \phi - m^2 \phi^2(x)) \]
 Similarly we derive KG eqn:
 \[ E^2 = p^2 + m^2 \]
-\[ (\pdv_2{}{t} - \nabla^2)\phi + m^2 \phi(x,t) = 0 \]
-A solution to this equation is \( e^{\iota(k\cdotx + \omega t)} \). When you apply \( \hat{H} \) we get energies like \( -\omega \phi \).\textbf{Negative Energy solution}. If you perturb this system slightly it keeps going down the potential well(since energy not bounded from below).  
+\[ (\pdv{}{t} - \nabla^2)\phi + m^2 \phi(x,t) = 0 \]
+A solution to this equation is \( e^{\iota(k \cdot x + \omega t)} \). When you apply \( \hat{H} \) we get energies like \( -\omega \phi \).\textbf{Negative Energy solution}. If you perturb this system slightly it keeps going down the potential well(since energy not bounded from below).  
 In QM continuity eqn:
 \[ \nabla J + \pdv{\rho}{t} = 0 \]
 \[J_i = \frac{ 1 }{ 2im } ( \phi^* \partial \phi - (\partial \phi^*) \phi)\]
@@ -183,5 +183,36 @@ Implies,
 \[ \dv{J^\mu}{X^\mu} = 0 \]
 \[ \partial_\mu J^\mu(x) = 0 \]
 This is known as \textbf{Noether's Theorem}
+\section{Lecture 5}
+\subsection{Recap}
+Now consider the Lagrangian density is also invariant:
+Assuming(Global symmetry):
+\[ \pdv{L}{\phi} F(x) + \pdv{L}{\partial_\mu \phi} \partial_\mu F(x) = 0 \]
+\[ S = \displaystyle\int_{}^{} d^4 x L(\phi, \partial_\mu \phi) \]
+take \( \phi \rightarrow(x) + \iota \epsilon(x) F(x) \)
+\[ \delta S = \displaystyle\int_{}^{} \pdv{L}{\phi} \iota \epsilon F(X) + \pdv{L}{\partial_\mu \phi} \partial_\mu ( \iota \epsilon F(x)) \]
+\[ = \displaystyle\int_{}^{} d^4 x \pdv{L}{\phi} \iota \epsilon F(x) 
++ \pdv{L}{\partial_\mu}  [ \iota \partial_\mu \epsilon(x) F(x) ] 
++ (\iota \epsilon(x) \partial_\mu F(x)) \]
+\[ = \displaystyle\int_{}^{} d^4 x \pdv{L}{\partial_\mu \phi} \iota  F(x) \partial_\mu \epsilon(x)  \]
+\[ J^\mu = - \pdv{L}{\partial_\mu \phi} \iota F(x) \]
+\subsection{New}
+\[ \phi(x) \rightarrow \phi(x + \epsilon(x)) \]
+\[  = \phi(x) + \epsilon^\mu(x) \partial_\mu \phi \]
+\[ \delta S = \displaystyle\int_{}^{} d^4 x [ \pdv{L}{\phi} \epsilon^\mu(x) \partial_\mu \phi + \pdv{L}{\partial_\mu \phi} \partial_\mu(\epsilon(x) \partial_\mu \phi(x))] \]
+\[ = ... + \pdv{L}{\partial_\mu \phi} \epsilon^\nu(x) \partial_\mu \partial_\nu \phi(x) + \pdv{L}{\partial_\mu \phi} \partial_\mu \epsilon^\nu(x) \partial_\nu \phi(x) \]
+\[ \pdv{L}{X^\mu} = \pdv{L}{\phi} \partial_\mu \phi + \pdv{L}{\partial_\nu \phi} \partial_\mu \partial_\nu \phi \]
+Going back to previous eqn:
+\[ = \displaystyle\int_{}^{} d^4 x (\epsilon^\nu(x) \partial_\nu L + \pdv{L}{\partial_\nu \phi} \partial_\mu \epsilon_\nu)(\partial_\nu \phi(x)) \]
+Integrating by parts
+\[ - \pdv{L}{\partial_\mu \phi} \epsilon^\nu \partial_\mu \partial_\nu \phi(x) + \pdv{L}{\partial_\mu \phi} \partial_\mu ( \epsilon^\nu `6_\nu \phi(x)) \]
+\[ \delta S = \displaystyle\int_{}^{} d^4 x  \delta^\mu_\nu \partial_\mu \epsilon^\nu(x) L - \partial_\nu \epsilon^\nu(x) L + \pdv{L}{\partial_\mu \phi} \partial_\nu \phi(\partial_\mu \epsilon^\nu) \]
+\[ = d^4 x [ (\partial_\mu \epsilon^\nu)[-\delta_\nu^\mu L + \pdv{L}{\partial_\mu \phi} \partial_\nu \phi]] \]
+\[ \delta S = - \displaystyle\int_{}^{} d^4 x \partial_\mu \epsilon^\nu(x) T^\mu_\nu \]
+Finally we get using \( \epsilon \rightarrow 0 at \infty \) and using equation of motion(Use the idea that for that equation of motion is derived from these kinds of variations) by applying by parts
+\[ \partial_\mu T^\mu_\nu = 0 \]
+Where:
+\[ T^\mu_\nu = - \delta_\nu^\mu ... \]
+This means energy momentum four Vector is conserved. \textbf{This happens ONLY because Lagrangian is NOT an explicit function of x and t.}. This is not related to Noether's Theorem.
 
 \end{document}
