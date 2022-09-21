@@ -1,0 +1,40 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\addbibresource{references.bib}
+\title{ BioInformatics \\ \large{ Course Code } }
+
+\author{Chirayu Gupta}
+\date{}
+\begin{document}
+\maketitle
+\section{PAM Paper}
+\begin{itemize}
+	\item Relationship between sequences are important to study evolutionary parameters
+	\item Accepted point mutation is a replacement of one amino acid with another accepted by natural selection
+	\item There are 20 amino acids in nature(I think)
+	\item Replacement of X by Y is same as Y by X
+	\item Non transitive nature of accepted point mutations
+	\item  Pam matices value \(  M_{ij} = \displaystyle\frac{\lambda m_j A_{ij}}{\displaystyle\sum_{i}^{}A_{ij}} \)
+	\item \( \lambda \) is prop contant. \( A_{ij} \) is element of the point mutation matix \( m_j \) is the mutability of jth amino acid
+	\item Total must sum to 1 so diagonal elements are \( M_{jj} = 1 - \lambda m_j \)
+	\item PAM decribes a unit of evolutionary change
+	\item Applying PAM matrix N times gives matix after N such evolutionary changes
+	\item \( f_i \) is the probablity that i will occur in the second sequence by chance(I think its the sum of elements in the corresponding row along with some normalization)
+	\item Percentage of amino acids observed to change on average \( 100(1 - \displaystyle\sum_{i}^{}f_i M_{ii}) \)
+	\item Relatedness Odds Matrix \( R_{ij} = \displaystyle\frac{M_{ij}}{f_i} \) is a matrix giving probablity of replacement per occurrence of i per occurrence of j
+	\item PAM 250 is relatedness odds matrix. In log scale
+\end{itemize}
+\section{Dynamic Programming Overview}
+\textbf{Why need an algorithm?}\\
+Complexity of scoring all possible sequences is \( O(2^{2N}) \).\\
+
+\end{document}

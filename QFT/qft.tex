@@ -214,5 +214,63 @@ Finally we get using \( \epsilon \rightarrow 0 at \infty \) and using equation o
 Where:
 \[ T^\mu_\nu = - \delta_\nu^\mu ... \]
 This means energy momentum four Vector is conserved. \textbf{This happens ONLY because Lagrangian is NOT an explicit function of x and t.}. This is not related to Noether's Theorem.
+\section{Lecture 5}
+\[ S = \displaystyle\frac{1}{2} \displaystyle\int_{}^{} d^3 x dt [\dot{\phi}^2 - [\nabla \phi]^2 - m^2\phi^2] \]
+See raghav Notes.
+\[ \dot{\dot{\phi}} + \displaystyle\frac{R^2 + m^2}{\omega_k^2} \phi_k \]
+See solution from raghav notes.
+\[ [a_k^- , a_{k'}^+] = \delta(k - k') \]
+TODO: Prove \( \dot{V_k} V_k^* - V_k \dot{V_k^*} = 2 \iota \) using phi form from raghav notes and above eqn\\
+Above quantity is called Wrongskian
+Choose \( V_K \)
+\[ \dot{V_k} = \alpha_k \dot{U_k}(t) + \beta_k  U_k(t) \]
+This will satisfy the diff eqn as long as 
+\[ |\alpha_k|^2 - | \beta_k |^2 = 1 \]
+This is known as Bogolyubov transformation\\
+TODO: Why for above eqn.\\
+Choice of mode function will not change \( \phi(x,t) \). It will just be in different "Basis"
+\[ N = a^+ a^- \]
+\( \ket{\partial^0_b} \) is a vaccum state(0 partice state) in b basis.
+\[ \bra{\partial^0_b} N^(b) \ket{\partial^0_b} = 0  \]
+Now we are interested in:
+\[ \bra{\partial^0_b} N^(a) \ket{\partial^0_b} = |\beta_k|^2 \delta^3(0)  \]
+which is non 0\\
+Based on choice of mode function, one person may or may not see particles.\\
+A particle is defined as a excitation with respect to a ground state.\\
+In adiabatic approx time dependence is neglected\\
+Choose a mode function:
+\[ V_k^* = \displaystyle\frac{1}{\sqrt{\omega_k}} e^{- \iota \omega_k t}  \]
+Show that \( \phi \) is Lorentz invariant after putting this mode function. Now the theory is Lorentz invariant!!
+\section{Homework}
+TODO: Homework
+\[1.\   S = \displaystyle\int_{}^{} d^4 x [ - \displaystyle\frac{1}{4} F_{\mu\nu}F^{\mu\nu}] , F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu \]
+\begin{itemize}
+	\item Find the EOM. Write the EOM in standard form identifying\( E^i = - F^d\) and \( \epsilon^{isk} B^k = -F^{ij} \)
+	\item Compute \( T^{\mu\nu} \) . Notice that it is symmetric in \( \mu_{i\nu} \)
+	\item Define \( T_{tilde}^{\mu\nu} =  T^{\mu\nu} ... \)
+		Show that \(  T_{tilde}^{\mu\nu}\) is symmtric and satisfies \( \partial_\mu T_{tilde}^{\mu\nu} = 0 \)
 
+\\
+... \\
+2. Consider the two complex Klein Gorden Scalar Fields
+\[ L = \displaystyle\sum_{}^{} \]
+\end{itemize}
+
+\section{Lecture 8}
+\[ L ~ (\partial_\mu \phi)^2 - m^2 \phi^2 \]
+To include interaction(scattering) term.
+\[  L ~ (\partial_\mu \phi)^2 - m^2 \phi^2 - \lambda \phi^3  \]
+\( \phi^3  \) means one phi interacts with 2 more phis\\
+\( \phi^2  \) means 2 phis just propagated\\
+See diagram from photos.\\
+COnstruct a scattering problem with two foch spaces. One for incpming particles, one for outgoing.
+To calculate \( \bra{\beta, out} \ket{\alpha, in} \) we get the \( \alpha \beta  \) elements of the S matrix.
+S is diagonal if there are no interactions.
+Elements of S matrix are \( \bra{out} S \ket{in} \)
+Similar to QM cross section:
+\[ d \sigma = \displaystyle\frac{1}{2E_1 2E_2 |\nu_1 \nu_2 |} |S|^2 d\pi\] 
+Where \( d \pi \) is the density of states(Final available states subject to energy momnetum conservation) which is given by
+\[ \pi_j \displaystyle\frac{d^3 p_j}{(2\pi)^3 2 E_{p_j}} (2 \pi)^4 \delta^4 (p_1 + p_2 - p_3 - p_4) \]
+Formula for S matrix LSZ reduction formula:
+\[ \bra{p_3 p_4} S \ket{p_1 p_2} \]  =  Given in pics
 \end{document}
